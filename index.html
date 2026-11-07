@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta los cursos de HTML, CSS y JavaScript e inscríbete en TechAprende.">
+  <title>TechAprende | Cursos tecnológicos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="encabezado" id="inicio">
+    <div class="barra-superior">
+      <a class="marca" href="#inicio" aria-label="TechAprende, ir al inicio">
+        <span class="marca-icono" aria-hidden="true">T</span>
+        <span>Tech<span class="marca-acento">Aprende</span></span>
+      </a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a class="menu-cta" href="#inscripcion">Inscribirme <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <div class="hero">
+      <div class="hero-contenido">
+        <p class="etiqueta">APRENDE · PRACTICA · CREA</p>
+        <h1>Tu próxima habilidad<br><span>comienza aquí.</span></h1>
+        <p class="hero-texto">Aprende desarrollo web desde cero con cursos prácticos de HTML, CSS y JavaScript. Elige tu ruta y calcula tu inscripción.</p>
+        <a class="boton boton-claro" href="#cursos">Explorar cursos <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-grafico" aria-hidden="true">
+        <div class="ventana-codigo">
+          <div class="ventana-puntos"><i></i><i></i><i></i><span>tu-proyecto.html</span></div>
+          <div class="codigo-lineas">
+            <span><b>01</b> <em>&lt;html&gt;</em></span>
+            <span><b>02</b> &nbsp;&nbsp;<em>&lt;head&gt;</em></span>
+            <span><b>03</b> &nbsp;&nbsp;&nbsp;&nbsp;<strong>Aprende</strong></span>
+            <span><b>04</b> &nbsp;&nbsp;<em>&lt;/head&gt;</em></span>
+            <span><b>05</b> <em>&lt;/html&gt;</em></span>
+          </div>
+          <div class="codigo-pie"><span class="estado-punto"></span> Listo para crear</div>
+        </div>
+        <div class="burbuja burbuja-html">&lt;/&gt;</div>
+        <div class="burbuja burbuja-css">{ }</div>
+        <div class="burbuja burbuja-js">JS</div>
+      </div>
+    </div>
+    <div class="hero-franja"><span>Formación práctica</span><span>Modalidad virtual o presencial</span><span>Inscripción estimada al instante</span></div>
+  </header>
+
+  <main class="contenedor">
+    <section class="seccion-cursos" id="cursos" aria-labelledby="titulo-cursos">
+      <div class="encabezado-seccion">
+        <div>
+          <p class="etiqueta etiqueta-oscura">NUESTRA OFERTA</p>
+          <h2 id="titulo-cursos">Explora los cursos</h2>
+        </div>
+        <p class="texto-seccion">Tres tecnologías esenciales para comenzar a construir experiencias en la web.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta tarjeta-html">
+          <div class="tarjeta-top"><span class="icono-curso" aria-hidden="true">&lt;/&gt;</span><span class="nivel">Fundamentos</span></div>
+          <h3>HTML</h3>
+          <p class="subtitulo-tarjeta">La estructura de la web</p>
+          <p>Aprende a organizar textos, imágenes, enlaces y contenido para crear la base de una página web.</p>
+          <div class="precio-tarjeta"><span>Valor del curso</span><strong>$100.000</strong></div>
+          <a href="#inscripcion" class="enlace-tarjeta" data-curso="HTML">Elegir HTML <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="tarjeta tarjeta-css">
+          <div class="tarjeta-top"><span class="icono-curso" aria-hidden="true">✳</span><span class="nivel">Diseño web</span></div>
+          <h3>CSS</h3>
+          <p class="subtitulo-tarjeta">Dale estilo a tus ideas</p>
+          <p>Descubre cómo aplicar colores, tipografías, espacios y diseños adaptables a diferentes pantallas.</p>
+          <div class="precio-tarjeta"><span>Valor del curso</span><strong>$120.000</strong></div>
+          <a href="#inscripcion" class="enlace-tarjeta" data-curso="CSS">Elegir CSS <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="tarjeta tarjeta-js">
+          <div class="tarjeta-top"><span class="icono-curso" aria-hidden="true">JS</span><span class="nivel">Interactividad</span></div>
+          <h3>JavaScript</h3>
+          <p class="subtitulo-tarjeta">Haz que sucedan cosas</p>
+          <p>Usa variables, funciones y eventos para responder a las acciones de las personas en tu página.</p>
+          <div class="precio-tarjeta"><span>Valor del curso</span><strong>$150.000</strong></div>
+          <a href="#inscripcion" class="enlace-tarjeta" data-curso="JavaScript">Elegir JavaScript <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="inscripcion" id="inscripcion" aria-labelledby="titulo-inscripcion">
+      <div class="inscripcion-intro">
+        <p class="etiqueta">DA EL SIGUIENTE PASO</p>
+        <h2 id="titulo-inscripcion">Calcula tu inscripción</h2>
+        <p>Completa tus datos, selecciona el curso y la modalidad. Verás un resumen con el valor estimado.</p>
+        <div class="nota-precio"><span class="nota-icono" aria-hidden="true">i</span><p>Los precios son ficticios y tienen fines académicos. No se realizan pagos ni se envían o guardan tus datos en un servidor.</p></div>
+      </div>
+
+      <div class="formulario-panel">
+        <form id="formulario" novalidate>
+          <div class="campo campo-completo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" minlength="3" maxlength="60" placeholder="Escribe tu nombre" autocomplete="name" required>
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" required>
+          </div>
+
+          <div class="campo">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="14" max="100" placeholder="Ej. 18" required>
+          </div>
+
+          <div class="campo">
+            <label for="curso">Curso</label>
+            <select id="curso" name="curso" required>
+              <option value="">Selecciona un curso</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JavaScript">JavaScript</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="modalidad">Modalidad</label>
+            <select id="modalidad" name="modalidad" required>
+              <option value="">Selecciona una modalidad</option>
+              <option value="Virtual">Virtual</option>
+              <option value="Presencial">Presencial</option>
+            </select>
+          </div>
+
+          <div class="acciones campo-completo">
+            <button class="boton boton-principal" type="submit">Calcular inscripción <span aria-hidden="true">↗</span></button>
+            <button class="boton boton-secundario" type="reset">Limpiar</button>
+          </div>
+        </form>
+
+        <section id="resultado" class="resultado" aria-live="polite" aria-atomic="true" hidden>
+          <div class="resultado-cabecera"><span class="resultado-check" aria-hidden="true">✓</span><div><p class="resultado-etiqueta">RESUMEN GENERADO</p><h3>Tu inscripción estimada</h3></div></div>
+          <dl class="resumen-datos" id="resumen-datos"></dl>
+          <div class="total"><span>Valor total</span><strong id="valor-total">$0</strong></div>
+          <p class="resultado-nota">Este resumen es informativo. No representa una compra ni un pago.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <a class="marca marca-pie" href="#inicio"><span class="marca-icono" aria-hidden="true">T</span><span>Tech<span class="marca-acento">Aprende</span></span></a>
+    <p>Proyecto académico · Desarrollo Web I</p>
+    <a href="#inicio" class="volver-arriba">Volver arriba ↑</a>
+  </footer>
+</body>
+</html>
